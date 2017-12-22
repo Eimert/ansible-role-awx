@@ -2,7 +2,7 @@
 dependencies: []
 
 galaxy_info:
-  author: geerlingguy
+  author: goroi
   description: "Installs and configures AWX (Ansible Tower's open source version)."
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
