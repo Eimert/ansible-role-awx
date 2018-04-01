@@ -1,0 +1,23 @@
+---
+# installs geerlingguy/ansible-role-awx
+# https://github.com/goroi/ansible-role-awx
+# dev invocation
+#
+- name: install roles for ansible awx
+  hosts: all
+  become: yes
+  vars:
+    nodejs_version: "6.x"
+    pip_install_packages:
+      - name: docker-py
+    pg_hostname: postgresql
+
+  roles:
+    - geerlingguy.repo-epel
+    - geerlingguy.git
+    - geerlingguy.ansible
+    - geerlingguy.docker
+    - geerlingguy.pip
+    - geerlingguy.nodejs
+    # - eimert.awx
+    - { role: '~/dev/ansible-role-awx'}
