@@ -7,6 +7,8 @@ driver:
   name: docker
 lint:
   name: yamllint
+  options:
+    config-file: ./molecule/default/.yamllint
 platforms:
   - name: awx-archlinux
     image: base/archlinux
