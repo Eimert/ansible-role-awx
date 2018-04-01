@@ -19,5 +19,5 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-    # - eimert.awx
+    # - geerlingguy.awx
     - { role: '~/dev/ansible-role-awx'}
