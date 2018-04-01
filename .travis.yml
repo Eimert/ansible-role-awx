@@ -1,22 +1,24 @@
 ---
+sudo: required
+language: python
 services: docker
 
 env:
-  - distro: centos7
-  - distro: ubuntu1604
-  - distro: debian9
+  - version=">=2.3,<2.4" distro="centos-7"
+  - version=">=2.4,<2.5" distro="centos-7"
+  - version=">=2.5,<2.6" distro="centos-7"
 
-  # Test without running the full playbook.
-  - distro: centos7
-    playbook: test-no-playbook.yml
+cache:
+  - pip
+
+install:
+  - pip install --upgrade pip
+  - pip install ansible"${version}"
+  - pip install molecule
+  - pip install docker-py
 
 script:
-  # Download test shim.
-  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
-  - chmod +x ${PWD}/tests/test.sh
-
-  # Run tests (increasing the travis_wait timeout).
-  - tests/custom_travis_wait.sh ${PWD}/tests/test.sh
+  - molecule test --scenario-name "${distro}"
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
