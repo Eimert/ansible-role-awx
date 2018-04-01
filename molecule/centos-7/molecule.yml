@@ -8,7 +8,7 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: tomcat-centos-7
+  - name: awx-centos-7
     image: centos:7
 provisioner:
   name: ansible

@@ -8,33 +8,33 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: tomcat-archlinux
+  - name: awx-archlinux
     image: base/archlinux
-  - name: tomcat-alpine-3.6
+  - name: awx-alpine-3.6
     image: alpine:3.6
-  - name: tomcat-alpine-3.7
+  - name: awx-alpine-3.7
     image: alpine:3.7
-  - name: tomcat-centos-6
+  - name: awx-centos-6
     image: centos:6
-  - name: tomcat-centos-7
+  - name: awx-centos-7
     image: centos:7
-  - name: tomcat-debian-stretch
+  - name: awx-debian-stretch
     image: debian:stretch
-  - name: tomcat-debian-buster
+  - name: awx-debian-buster
     image: debian:buster
-  - name: tomcat-fedora-26
+  - name: awx-fedora-26
     image: fedora:26
-  - name: tomcat-fedora-27
+  - name: awx-fedora-27
     image: fedora:27
-  - name: tomcat-opensuse-42.2
+  - name: awx-opensuse-42.2
     image: opensuse:42.2
-  - name: tomcat-opensuse-42.3
+  - name: awx-opensuse-42.3
     image: opensuse:42.3
     # 16.04 LTS
-  - name: tomcat-ubuntu-xenial
+  - name: awx-ubuntu-xenial
     image: ubuntu:xenial
     # 17.04
-  - name: tomcat-ubuntu-artful
+  - name: awx-ubuntu-artful
     image: ubuntu:artful
 provisioner:
   name: ansible
