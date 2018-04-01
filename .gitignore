@@ -1,3 +1,4 @@
+molecule/*/.molecule
 *.swp
 *.retry
 tests/test.sh
