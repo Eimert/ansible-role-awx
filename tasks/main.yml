@@ -17,6 +17,11 @@
     force: yes
     accept_hostkey: yes
 
+- name: copy inventory files
+  copy:
+    src: ../inventory/
+    dest: "{{ awx_repo_dir }}/installer"
+
 - include: awx-set-passwords.yml
 
 - include: awx-install-playbook.yml
