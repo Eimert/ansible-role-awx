@@ -1,4 +1,4 @@
 *.retry
 tests/test.sh
 roles/
-awx.yml
+*awx.yml
