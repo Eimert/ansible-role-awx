@@ -1,5 +1,5 @@
 ---
-# Git clone this repo, add/customize inventory files; they will be copied to the target hosts (in main.yml).
+# awx installation can be fully customized using files inventory/
 - name: Run the AWX installation playbook.
   command: "ansible-playbook -i {{ inventory_file }} install.yml"
   args:

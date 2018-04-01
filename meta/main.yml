@@ -3,7 +3,7 @@ dependencies: []
 
 galaxy_info:
   author: Eimert
-  description: "Installs and configures AWX (Ansible Tower's open source version). Customizable PostgreSQL database connection settings."
+  description: "Installs and configures AWX. Customizable inventory."
   license: "license (BSD, MIT)"
   min_ansible_version: 2.3
   platforms:
