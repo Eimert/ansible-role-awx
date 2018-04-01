@@ -28,9 +28,13 @@ Available variables are listed below, along with default values (see `defaults/m
     awx_version: devel
     awx_keep_updated: yes
     awx_secret_key: awxsecret
+    pg_hostname: postgresql
     pg_password: awxpass
+    pg_database: awx
+    pg_port: 5432
     default_admin_user: admin
     default_admin_password: password
+    inventory_file: inventory
 
 Variables to control what version of AWX is checked out and installed.
 
@@ -40,18 +44,19 @@ By default, this role will run the installation playbook included with AWX (whic
 
 ## Dependencies
 
-None.
+Depends on the roles defined in `requirements.yml`.
 
 ## Example Playbook
 
     - hosts: awx-centos
       become: yes
-    
+
       vars:
         nodejs_version: "6.x"
         pip_install_packages:
           - name: docker-py
-    
+        pg_hostname: postgresql
+
       roles:
         - geerlingguy.repo-epel
         - geerlingguy.git
@@ -59,9 +64,18 @@ None.
         - geerlingguy.docker
         - geerlingguy.pip
         - geerlingguy.nodejs
-        - geerlingguy.awx
+        - eimert.awx
 
 After AWX is installed, you can log in with the default username `admin` and password `password`.
+
+## Development setup
+
+Fork or `git clone git@github.com:Eimert/ansible-role-awx.git`.
+Local:
+    ansible-galaxy install -p ./roles -r ./requirements.yml
+    create example playbook: `awx.yml`.
+    ansible-playbook -u eimertvink -i "ansible-dev.eimertvink.nl," ./awx.yml --start-at-task="Clone AWX into configured directory."
+
 
 ## License
 
@@ -70,3 +84,4 @@ MIT / BSD
 ## Author Information
 
 This role was created in 2017 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+
