@@ -32,7 +32,6 @@ dockerhub_version=latest
 # awx_task_mem_request=2
 
 # Common Docker parameters
-postgres_data_dir=/tmp/pgdocker
 host_port=80
 
 # Docker Compose Install
@@ -57,9 +56,10 @@ docker_compose_dir=/var/lib/awx
 # Set this to true to delete images from docker on the build host so that they are pushed to the remote repository
 # docker_remove_local_images=False
 
-# Set pg_hostname if you have an external postgres server, otherwise
+# Set pg_hostname AND postgres_data_dir if you have an external postgres server, otherwise
 # a new postgres service will be created
 # pg_hostname=postgresql
+# postgres_data_dir=/tmp/pgdocker
 pg_username=awx
 pg_password=awxpass
 pg_database=awx
