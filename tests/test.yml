@@ -1,10 +1,11 @@
 ---
 - hosts: all
-
+  become: yes
   vars:
     nodejs_version: "6.x"
     pip_install_packages:
       - name: docker-py
+    awx_run_install_playbook: no
 
   pre_tasks:
     - name: Update apt cache.
@@ -20,4 +21,4 @@
     - geerlingguy.docker
     - geerlingguy.pip
     - geerlingguy.nodejs
-    - role_under_test
+    - eimert.awx

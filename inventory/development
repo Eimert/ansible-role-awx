@@ -59,7 +59,7 @@ docker_compose_dir=/var/lib/awx
 # Set pg_hostname AND postgres_data_dir if you have an external postgres server, otherwise
 # a new postgres service will be created
 # pg_hostname=postgresql
-# postgres_data_dir=/tmp/pgdocker
+postgres_data_dir=/tmp/pgdocker
 pg_username=awx
 pg_password=awxpass
 pg_database=awx

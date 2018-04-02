@@ -16,7 +16,6 @@ install:
   - pip install ansible"${version}"
   - pip install molecule
   - pip install docker-py
-  - yamllint -v
 
 script:
   - molecule test --scenario-name "${distro}"
