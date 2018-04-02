@@ -4,6 +4,9 @@
 
 Installs and configures [AWX](https://github.com/ansible/awx), the open source version of [Ansible Tower](https://www.ansible.com/tower).
 
+### WIP: disfunctional at the moment
+working on integrating inventory functionality.
+
 ## Requirements
 
 Before this role runs, assuming you want the role to completely set up AWX using it's included installer, you need to make sure the following AWX dependencies are installed:
