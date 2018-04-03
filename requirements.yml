@@ -1,7 +1,9 @@
 ---
-- src: geerlingguy.repo-epel
+- src: robertdebock.bootstrap
+- src: robertdebock.buildtools
+- src: robertdebock.epel
+- src: robertdebock.scl
+- src: robertdebock.python-pip
+- src: robertdebock.docker
 - src: geerlingguy.git
-- src: geerlingguy.ansible
-- src: geerlingguy.docker
-- src: geerlingguy.pip
 - src: geerlingguy.nodejs

@@ -6,12 +6,22 @@ galaxy_info:
   description: "Installs and configures AWX. Customizable inventory."
   license: "license (BSD, MIT)"
   min_ansible_version: 2.3
+  min_ansible_container_version: 0.2.0
+
   platforms:
-    - name: EL
+    - name: CentOS
+      version:
+        - 7
+    - name: Debian
       versions:
+        - all
+    - name: EL
+      version:
         - 7
   galaxy_tags:
     - CentOS
     - ansible
     - awx
     - tower
+    - Debian
+    - CentOS

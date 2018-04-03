@@ -16,6 +16,7 @@
     update: "{{ awx_keep_updated }}"
     force: yes
     accept_hostkey: yes
+  changed_when: false # forcing idempotency
 
 - name: copy inventory files
   copy:
