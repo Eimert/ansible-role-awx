@@ -11,16 +11,7 @@ working on integrating inventory functionality.
 
 Before this role runs, assuming you want the role to completely set up AWX using it's included installer, you need to make sure the following AWX dependencies are installed:
 
-| Dependency                    | Suggested Role           |
-| ----------------------------- | ------------------------ |
-| EPEL repo (RedHat OSes only)  | `geerlingguy.repo-epel`  |
-| Git                           | `geerlingguy.git`        |
-| Ansible                       | `geerlingguy.ansible`    |
-| Docker                        | `geerlingguy.docker`     |
-| Python Pip                    | `geerlingguy.pip`        |
-| Node.js (6.x)                 | `geerlingguy.nodejs`     |
-
-See this role's `tests/test.yml` playbook for an example that works across many different OSes.
+    see `requirements.yml`.
 
 ## Role Variables
 
@@ -36,8 +27,10 @@ Available variables are listed below, along with default values (see `defaults/m
     pg_database: awx
     pg_port: 5432
     default_admin_user: admin
+    # WIP: specific variables for each environment in the inventory files.
     default_admin_password: password
     inventory_file: inventory
+
 
 Variables to control what version of AWX is checked out and installed.
 
