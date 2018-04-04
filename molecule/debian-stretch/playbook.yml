@@ -18,6 +18,6 @@
     - role: robertdebock.scl
     - role: robertdebock.python-pip
     - role: robertdebock.docker
-    - role: geerlingguy.git
+    - role: nephelaiio.git
     - role: geerlingguy.nodejs
     - role: ansible-role-awx
