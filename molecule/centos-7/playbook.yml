@@ -12,12 +12,13 @@
       - name: docker-py
     awx_run_install_playbook: no
   roles:
+    # - { role: robertdebock.bootstrap, when: ansible_virtualization_type == "docker" }
     - role: robertdebock.bootstrap
     - role: robertdebock.buildtools
     - role: robertdebock.epel
     - role: robertdebock.scl
     - role: robertdebock.python-pip
     - role: robertdebock.docker
-    - role: geerlingguy.git
+    - role: nephelaiio.git
     - role: geerlingguy.nodejs
     - role: ansible-role-awx

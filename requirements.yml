@@ -5,5 +5,5 @@
 - src: robertdebock.scl
 - src: robertdebock.python-pip
 - src: robertdebock.docker
-- src: geerlingguy.git
+- src: nephelaiio.git
 - src: geerlingguy.nodejs
