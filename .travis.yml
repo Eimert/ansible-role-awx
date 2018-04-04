@@ -7,7 +7,7 @@ env:
   - version=">=2.3,<2.4" distro="centos-7"
   - version=">=2.4,<2.5" distro="centos-7"
   - version=">=2.5,<2.6" distro="centos-7"
-  # will be supported when apt_key becomes availabe on
+  # will be supported when docker apt_key becomes availabe on
   # https://apt.dockerproject.org/repo/dists/
   # - version=">=2.3,<2.4" distro="debian-buster"
   # - version=">=2.4,<2.5" distro="debian-buster"
@@ -18,9 +18,10 @@ env:
   - version=">=2.3,<2.4" distro="debian-stretch"
   - version=">=2.4,<2.5" distro="debian-stretch"
   - version=">=2.5,<2.6" distro="debian-stretch"
-  - version=">=2.3,<2.4" distro="debian-wheezy"
-  - version=">=2.4,<2.5" distro="debian-wheezy"
-  - version=">=2.5,<2.6" distro="debian-wheezy"
+  # robertdebock.pip: pip v9.x.x. not there for wheezy
+  # - version=">=2.3,<2.4" distro="debian-wheezy"
+  # - version=">=2.4,<2.5" distro="debian-wheezy"
+  # - version=">=2.5,<2.6" distro="debian-wheezy"
 
 cache:
   - pip
