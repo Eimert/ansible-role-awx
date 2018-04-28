@@ -4,9 +4,6 @@
 
 Installs and configures [AWX](https://github.com/ansible/awx), the open source version of [Ansible Tower](https://www.ansible.com/tower).
 
-### WIP: disfunctional at the moment
-working on integrating inventory functionality.
-
 ## Requirements
 
 Before this role runs, assuming you want the role to completely set up AWX using it's included installer, you need to make sure the following AWX dependencies are installed:<br>
@@ -40,9 +37,18 @@ default_admin_password: password
 
 Depends on the roles defined in `requirements.yml`.
 
-## Example Playbook
+## Example Playbook and Inventory file
 
-See [awx.yml](awx.yml). After AWX is installed, you can log in with the default username `admin` and password `password`.
+See playbook: [awx.yml](awx.yml). The [example-inventory](files/example-inventory) configures an external PostgreSQL db connection:
+```
+pg_hostname=ec2-79-125-112-209.eu-west-1.compute.amazonaws.com
+pg_username=user123
+pg_password=password321
+pg_database=awx-dev-db
+pg_port=5432
+```
+
+After AWX is installed, you can log in with the default username `admin` and password `password`.
 
 ## Development setup
 

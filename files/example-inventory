@@ -58,10 +58,10 @@ docker_compose_dir=/var/lib/awx
 
 # Set pg_hostname if you have an external postgres server, otherwise
 # a new postgres service will be created
-# pg_hostname=postgresql
-pg_username=awx
-pg_password=awxpass
-pg_database=awx
+pg_hostname=ec2-79-125-112-209.eu-west-1.compute.amazonaws.com
+pg_username=user123
+pg_password=password321
+pg_database=awx-dev-db
 pg_port=5432
 
 # Use a local distribution build container image for building the AWX package

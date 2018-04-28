@@ -10,9 +10,9 @@
     nodejs_version: "6.x"
     pip_install_packages:
       - name: docker-py
-    awx_run_install_playbook: no
+    awx_run_install_playbook: yes
     # recommended to customise, place custom inventory files under files/ or on managed host under ~/awx/installer/
-    inventory_file: inventory
+    inventory_file: example-inventory
   roles:
     - geerlingguy.repo-epel
     - geerlingguy.git
