@@ -4,3 +4,4 @@ molecule/*/.molecule
 tests/test.sh
 roles/
 awx.yml
+inventory/eimert
