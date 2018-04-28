@@ -3,5 +3,4 @@ molecule/*/.molecule
 *.retry
 tests/test.sh
 roles/
-awx.yml
-inventory/eimert
+files/eimert
