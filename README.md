@@ -50,6 +50,15 @@ pg_port=5432
 
 After AWX is installed, you can log in with the default username `admin` and password `password`.
 
+## Troubleshooting
+
+The default inventory files under files/ will enventually run out of sync with the [AWX project](https://github.com/ansible/awx/blob/devel/installer/inventory) inventory file. <br>
+diff one inventory file with the latest default inventory file. Or rule out by using the AWX default inventory file downloaded at playbook run time:
+```
+# choose the inventory file to use. AWX default == inventory
+inventory_file: inventory
+```
+
 ## Development setup
 
 Fork or `git clone git@github.com:Eimert/ansible-role-awx.git`.
