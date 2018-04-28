@@ -1,0 +1,24 @@
+---
+# installs https://github.com/Eimert/ansible-role-awx
+# forked from on: https://github.com/goroi/ansible-role-awx
+#
+- name: install roles for ansible awx
+  hosts: all
+  become: yes
+  vars:
+    # essential:
+    nodejs_version: "6.x"
+    pip_install_packages:
+      - name: docker-py
+    awx_run_install_playbook: no
+    # recommended to customize:
+    inventory_file: inventory
+  roles:
+    - geerlingguy.repo-epel
+    - geerlingguy.git
+    - geerlingguy.ansible
+    - geerlingguy.docker
+    - geerlingguy.pip
+    - geerlingguy.nodejs
+    # - geerlingguy.awx
+    - { role: '~/dev/ansible-role-awx'}

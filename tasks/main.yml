@@ -18,12 +18,11 @@
     accept_hostkey: yes
   changed_when: false
 
+# added by Eimert
 - name: copy inventory files
   copy:
-    src: ../inventory/
-    dest: "{{ awx_repo_dir }}/installer"
-
-- include: awx-set-passwords.yml
+    src: "./"
+    dest: "{{ awx_repo_dir }}/installer/"
 
 - include: awx-install-playbook.yml
   when: awx_run_install_playbook

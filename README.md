@@ -9,34 +9,32 @@ working on integrating inventory functionality.
 
 ## Requirements
 
-Before this role runs, assuming you want the role to completely set up AWX using it's included installer, you need to make sure the following AWX dependencies are installed:
-
-    see `requirements.yml`.
+Before this role runs, assuming you want the role to completely set up AWX using it's included installer, you need to make sure the following AWX dependencies are installed:<br>
+see [requirements.yml](requirements.yml).
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
-
-    awx_repo: https://github.com/ansible/awx.git
-    awx_repo_dir: "~/awx"
-    awx_version: devel
-    awx_keep_updated: yes
-    awx_secret_key: awxsecret
-    pg_hostname: postgresql
-    pg_password: awxpass
-    pg_database: awx
-    pg_port: 5432
-    default_admin_user: admin
-    # WIP: specific variables for each environment in the inventory files.
-    default_admin_password: password
-    inventory_file: inventory
-
-
-Variables to control what version of AWX is checked out and installed.
-
-    awx_run_install_playbook: yes
-
+See [defaults/main.yml](defaults/main.yml).
+```
+# choose the inventory file to use. AWX default == inventory
+inventory_file: inventory
+```
+Variable to control if awx will be installed immediately:
+```
+awx_run_install_playbook: yes
+```
 By default, this role will run the installation playbook included with AWX (which builds a set of containers and runs them). You can disable the playbook run by setting this variable to `no`.
+
+Under [files/](files/) inventory files can be stored, that will be copied to the AWX host. Those files can be used to set custom PostgreSQL DB connection details. Like:
+```
+secret_key: awxsecret
+pg_hostname: postgresql
+pg_password: awxpass
+pg_database: awx
+pg_port: 5432
+default_admin_user: admin
+default_admin_password: password
+```
 
 ## Dependencies
 
@@ -44,32 +42,12 @@ Depends on the roles defined in `requirements.yml`.
 
 ## Example Playbook
 
-    - hosts: awx-centos
-      become: yes
-
-      vars:
-        nodejs_version: "6.x"
-        pip_install_packages:
-          - name: docker-py
-        pg_hostname: postgresql
-
-      roles:
-        - geerlingguy.repo-epel
-        - geerlingguy.git
-        - geerlingguy.ansible
-        - geerlingguy.docker
-        - geerlingguy.pip
-        - geerlingguy.nodejs
-        - eimert.awx
-
-After AWX is installed, you can log in with the default username `admin` and password `password`.
+See [awx.yml](awx.yml). After AWX is installed, you can log in with the default username `admin` and password `password`.
 
 ## Development setup
 
 Fork or `git clone git@github.com:Eimert/ansible-role-awx.git`.
-Local:
-    ansible-galaxy install -p ./roles -r ./requirements.yml
-    create example playbook: `awx.yml`.
+
     ansible-playbook -u eimertvink -i "ansible-dev.eimertvink.nl," ./awx.yml --start-at-task="Clone AWX into configured directory."
 
 
@@ -79,4 +57,6 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2017 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/). Eimert added customizable PostgreSQL database connection settings.
+This role was created in 2017 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/). <br>
+2018: Eimert implemented customizable inventory/ files for more advanced installations, like an external PostgreSQL database connection.
+
