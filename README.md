@@ -37,6 +37,15 @@ default_admin_password: password
 
 Depends on the roles defined in `requirements.yml`.
 
+## Compatibility
+
+- Red Hat Enterprise Linux 7
+- CentOS 7
+- Debian Jessie
+- Debian Stretch
+<br>
+- Ansible >=2.3,<2.6
+
 ## Example Playbook and Inventory file
 
 See playbook: [awx.yml](awx.yml). The [example-inventory](files/example-inventory) configures an external PostgreSQL db connection:
