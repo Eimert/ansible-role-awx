@@ -39,12 +39,11 @@ Depends on the roles defined in `requirements.yml`.
 
 ## Compatibility
 
+- Ansible >=2.3,<2.6
 - Red Hat Enterprise Linux 7
 - CentOS 7
 - Debian Jessie
 - Debian Stretch
-<br>
-- Ansible >=2.3,<2.6
 
 ## Example Playbook and Inventory file
 
