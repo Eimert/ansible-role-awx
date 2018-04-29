@@ -20,5 +20,5 @@
     - role: robertdebock.python-pip
     - role: robertdebock.docker
     - role: nephelaiio.git
-    - role: geerlingguy.nodejs
+    - role: williamyeh.nodejs
     - role: ansible-role-awx

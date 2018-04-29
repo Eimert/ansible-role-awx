@@ -20,5 +20,5 @@
     - geerlingguy.ansible
     - geerlingguy.docker
     - geerlingguy.pip
-    - geerlingguy.nodejs
+    - williamyeh.nodejs
     - eimert.awx
