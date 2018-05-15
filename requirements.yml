@@ -6,4 +6,4 @@
 - src: robertdebock.python-pip
 - src: robertdebock.docker
 - src: nephelaiio.git
-- src: AerisCloud.nodejs
+- src: williamyeh.nodejs

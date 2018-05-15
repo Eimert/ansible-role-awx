@@ -15,9 +15,10 @@ env:
   - version=">=2.3,<2.4" distro="debian-jessie"
   - version=">=2.4,<2.5" distro="debian-jessie"
   - version=">=2.5,<2.6" distro="debian-jessie"
-  - version=">=2.3,<2.4" distro="debian-stretch"
-  - version=">=2.4,<2.5" distro="debian-stretch"
-  - version=">=2.5,<2.6" distro="debian-stretch"
+  #  debian stretch issue: https://github.com/William-Yeh/ansible-nodejs/pull/12
+  # - version=">=2.3,<2.4" distro="debian-stretch"
+  # - version=">=2.4,<2.5" distro="debian-stretch"
+  # - version=">=2.5,<2.6" distro="debian-stretch"
   # robertdebock.pip: pip v9.x.x. not there for wheezy
   # - version=">=2.3,<2.4" distro="debian-wheezy"
   # - version=">=2.4,<2.5" distro="debian-wheezy"
