@@ -39,11 +39,7 @@ Depends on the roles defined in `requirements.yml`.
 
 ## Compatibility
 
-- Ansible >=2.3,<2.6
-- Red Hat Enterprise Linux 7
-- CentOS 7
-- Debian Jessie
-- Debian Stretch
+See [meta/main.yml](meta/main.yml) or ['OS Platforms' on Ansible Galaxy](https://galaxy.ansible.com/Eimert/awx/).
 
 ## Example Playbook and Inventory file
 
